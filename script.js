@@ -1,16 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
+// DARK MODE TOGGLE
+const toggleBtn = document.getElementById("themeToggle");
 
-      const target = document.querySelector(this.getAttribute("href"));
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 20,
-          behavior: "smooth"
-        });
-      }
-    });
+  toggleBtn.textContent =
+    document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+
+
+// SCROLL ANIMATION (fade-in sections)
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
   });
+}, { threshold: 0.1 });
+
+sections.forEach(section => {
+  observer.observe(section);
 });
