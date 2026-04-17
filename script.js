@@ -1,4 +1,4 @@
-// DARK MODE TOGGLE
+// ===== DARK MODE TOGGLE =====
 const toggleBtn = document.getElementById("themeToggle");
 
 toggleBtn.addEventListener("click", () => {
@@ -9,17 +9,21 @@ toggleBtn.addEventListener("click", () => {
 });
 
 
-// SCROLL ANIMATION (fade-in sections)
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(entries => {
+// ===== SCROLL ANIMATION (Nice reveal effect) =====
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
     }
   });
-}, { threshold: 0.1 });
+}, {
+  threshold: 0.1
+});
 
-sections.forEach(section => {
-  observer.observe(section);
+document.querySelectorAll(".section, .card, .project-card").forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(20px)";
+  el.style.transition = "0.6s ease";
+  observer.observe(el);
 });
