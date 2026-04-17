@@ -1,121 +1,86 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+/* BODY */
 body {
-  background: #f9fafb;
+  background: #ffffff;
   color: #111;
+  line-height: 1.6;
 }
 
 /* NAV */
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 10%;
-  background: white;
-  border-bottom: 1px solid #eee;
+  padding: 30px 10%;
+  font-size: 14px;
 }
 
 .nav a {
-  margin-left: 15px;
+  margin-left: 25px;
   text-decoration: none;
-  color: #555;
+  color: #111;
 }
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 100px 20px;
+  padding: 120px 10%;
+  max-width: 1000px;
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 15px;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .hero p {
-  max-width: 600px;
-  margin: auto;
+  font-size: 18px;
   color: #555;
+  max-width: 600px;
 }
 
-/* BUTTONS */
-.buttons {
-  margin-top: 20px;
-}
-
-.buttons a {
-  padding: 10px 20px;
-  background: #2563eb;
-  color: white;
-  text-decoration: none;
-  margin: 5px;
-  border-radius: 6px;
-}
-
-.buttons .outline {
-  background: transparent;
-  border: 1px solid #2563eb;
-  color: #2563eb;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section {
-  padding: 80px 10%;
+  padding: 100px 10%;
+  max-width: 1000px;
 }
 
 .section h2 {
-  margin-bottom: 30px;
   font-size: 28px;
+  margin-bottom: 40px;
 }
 
-/* ALT BACKGROUND */
-.alt {
-  background: #f1f5f9;
+/* WORK LIST */
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.work-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-/* CARD */
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #eee;
-  transition: 0.2s;
+.work-item p {
+  color: #666;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* CONTACT */
-.contact {
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
+/* ABOUT */
+.about-text {
+  font-size: 18px;
+  max-width: 700px;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: white;
+  padding: 60px 10%;
+  color: #999;
 }
