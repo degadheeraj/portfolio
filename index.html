@@ -4,125 +4,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dheeraj Dega | Portfolio</title>
+  <title>Dheeraj Dega | Senior Performance Engineer</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
+<!-- NAVIGATION (Modern clean version like Nicepage) -->
+<header class="nav">
   <div class="logo">Dheeraj Dega</div>
 
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#focus">Focus</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <button id="themeToggle">🌙</button>
-</nav>
-
-
-<!-- HERO SECTION -->
-<header class="hero">
-  <h1>Dheeraj Dega</h1>
-  <h2>Senior Performance Engineer / Software QA Engineer</h2>
-  <p>9+ years of experience in Performance Engineering, Cloud Testing & Scalability Engineering</p>
 </header>
 
 
-<!-- ABOUT -->
+<!-- HERO SECTION -->
+<section id="hero" class="hero">
+  <div class="hero-left">
+    <div class="kicker">Performance Engineering • Cloud • Scalability</div>
+
+    <h1>Senior Performance Engineer</h1>
+
+    <p>
+      9+ years of experience building scalable systems, performance testing frameworks,
+      and cloud-based reliability engineering solutions.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#projects">View Work</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+
+    <div class="metrics">
+      <div><b>9+</b><span>Years Experience</span></div>
+      <div><b>Cloud</b><span>AWS & Azure</span></div>
+      <div><b>Tools</b><span>JMeter, LoadRunner</span></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="glass-card">
+      <h3>Core Expertise</h3>
+      <ul>
+        <li>Performance Testing Engineering</li>
+        <li>Cloud Scalability Architecture</li>
+        <li>CI/CD Performance Integration</li>
+        <li>System Bottleneck Analysis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOCUS SECTION (like Nicepage “What I Focus On”) -->
+<section id="focus" class="section">
+  <h2>What I Focus On</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Performance Engineering</h3>
+      <p>End-to-end load testing, stress testing, scalability validation and tuning.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cloud Systems</h3>
+      <p>AWS-based performance environments, monitoring, and optimization.</p>
+    </div>
+
+    <div class="card">
+      <h3>CI/CD Integration</h3>
+      <p>Embedding performance testing into Jenkins and GitHub Actions pipelines.</p>
+    </div>
+
+    <div class="card">
+      <h3>Observability</h3>
+      <p>Using Dynatrace, Splunk, AppDynamics for deep system insights.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJECTS SECTION (Nicepage-style cards) -->
+<section id="projects" class="section dark">
+  <h2>Selected Projects</h2>
+
+  <div class="project-grid">
+
+    <div class="project-card highlight">
+      <h3>Enterprise Performance Framework</h3>
+      <p>
+        Built reusable performance testing framework using JMeter, LoadRunner,
+        integrated with CI/CD pipelines for automated validation.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Cloud Load Testing System</h3>
+      <p>
+        Designed AWS-based performance environments for large-scale distributed systems.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Observability Dashboard System</h3>
+      <p>
+        Built monitoring pipelines using Splunk, Grafana, and Dynatrace.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
 <section id="about" class="section">
-  <h2>Professional Summary</h2>
+  <h2>About Me</h2>
+
   <p>
-    Senior Performance Test Engineer with 9+ years of expertise in performance testing,
-    cloud-based systems, scalability engineering, and CI/CD integration.
-    Experienced in LoadRunner, JMeter, Blazemeter, NeoLoad, Dynatrace, Splunk, and AWS environments.
+    Senior Performance Engineer with experience across banking, healthcare,
+    automotive, and enterprise SaaS systems. Specialized in scalability,
+    reliability, and cloud performance engineering.
+  </p>
+
+  <p>
+    I work closely with Dev, QA, DevOps, and infrastructure teams to ensure
+    systems meet strict performance SLAs before production release.
   </p>
 </section>
 
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <h2>Core Strengths</h2>
-  <ul>
-    <li>Performance Testing & Engineering</li>
-    <li>End-to-End Performance Lifecycle</li>
-    <li>Cloud Performance Engineering (AWS)</li>
-    <li>CI/CD Integration & Automation</li>
-    <li>Test Strategy & Capacity Planning</li>
-    <li>Distributed Systems Performance Tuning</li>
-  </ul>
-
-  <h3>Technical Skills</h3>
-  <p>
-    <b>Tools:</b> LoadRunner, JMeter, BlazeMeter, NeoLoad, Dynatrace, AppDynamics, Splunk
-  </p>
-  <p>
-    <b>Languages:</b> Java, JavaScript, Groovy, C++, SQL
-  </p>
-  <p>
-    <b>Cloud:</b> AWS, Azure, PCF
-  </p>
-  <p>
-    <b>CI/CD:</b> Jenkins, Bamboo, GitHub Actions
-  </p>
-</section>
-
-
-<!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <h2>Professional Experience</h2>
-
-  <div class="job">
-    <h3>Cox Automotive / Vitu – Senior Performance Engineer</h3>
-    <p>Nov 2022 – Present | Atlanta, GA</p>
-    <ul>
-      <li>Led performance engineering across global teams</li>
-      <li>Built scalable load testing frameworks using JMeter & LoadRunner</li>
-      <li>Integrated performance tests into CI/CD pipelines using Jenkins & GitHub Actions</li>
-      <li>Worked on AWS-based performance environments and monitoring tools</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <h3>GlobalLogic Inc – Performance Engineer</h3>
-    <p>Feb 2021 – Oct 2022 | Chicago, IL</p>
-    <ul>
-      <li>Designed performance scenarios for enterprise healthcare systems</li>
-      <li>Executed load testing using JMeter and analyzed bottlenecks</li>
-      <li>Improved system performance through root cause analysis</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <h3>Mphasis Ltd – Senior Performance Engineer</h3>
-    <p>Mar 2018 – Dec 2019 | Bangalore, India</p>
-    <ul>
-      <li>Developed LoadRunner scripts for banking applications</li>
-      <li>Used AppDynamics, Splunk for monitoring and diagnostics</li>
-      <li>Performed performance optimization and regression testing</li>
-    </ul>
-  </div>
-</section>
-
-
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 <section id="contact" class="section contact">
-  <h2>Contact</h2>
+  <h2>Let’s Connect</h2>
 
   <p>Email: your-email@example.com</p>
   <p>LinkedIn: linkedin.com/in/yourprofile</p>
   <p>GitHub: github.com/degadheeraj</p>
+
+  <a class="btn" href="mailto:your-email@example.com">Send Email</a>
 </section>
 
 
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 Dheeraj Dega | Performance Engineering Portfolio</p>
+  <p>© 2026 Dheeraj Dega | Performance Engineering</p>
 </footer>
 
 
