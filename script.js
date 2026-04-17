@@ -1,29 +1,28 @@
-// ===== DARK MODE TOGGLE =====
+// DARK MODE
 const toggleBtn = document.getElementById("themeToggle");
 
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-
-  toggleBtn.textContent =
-    document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
+// ACTIVE NAV
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav a");
 
-// ===== SCROLL ANIMATION (Nice reveal effect) =====
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = "translateY(0)";
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
     }
   });
-}, {
-  threshold: 0.1
-});
 
-document.querySelectorAll(".section, .card, .project-card").forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = "translateY(20px)";
-  el.style.transition = "0.6s ease";
-  observer.observe(el);
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
