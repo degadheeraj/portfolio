@@ -1,6 +1,8 @@
-// DARK MODE (optional)
-const btn = document.getElementById("themeToggle");
-
-btn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+// smooth scroll feel (Ashik style minimal)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });
